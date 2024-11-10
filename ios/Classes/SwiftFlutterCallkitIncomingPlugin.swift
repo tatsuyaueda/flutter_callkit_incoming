@@ -446,7 +446,7 @@ public class SwiftFlutterCallkitIncomingPlugin: NSObject, FlutterPlugin, CXProvi
                     .allowBluetooth,
                 ])
                 
-                try session.setMode(self.getAudioSessionMode("audioSessionMode"))
+                try session.setMode(self.getAudioSessionMode("voiceChat"))
                 try session.setActive(data?.audioSessionActive ?? true)
                 try session.setPreferredSampleRate(data?.audioSessionPreferredSampleRate ?? 44100.0)
                 try session.setPreferredIOBufferDuration(data?.audioSessionPreferredIOBufferDuration ?? 0.005)

@@ -16,12 +16,12 @@
 
 - (BOOL)application:(UIApplication*)application
     didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  [GeneratedPluginRegistrant registerWithRegistry:self];
+  // [GeneratedPluginRegistrant registerWithRegistry:self];
     
     
-    PKPushRegistry *pushRegistry = [[PKPushRegistry alloc] initWithQueue:dispatch_get_main_queue()];
-    pushRegistry.delegate = self;
-    pushRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
+    // PKPushRegistry *pushRegistry = [[PKPushRegistry alloc] initWithQueue:dispatch_get_main_queue()];
+    // pushRegistry.delegate = self;
+    // pushRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
     
     NSTimeInterval delayInSeconds = 5.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -39,16 +39,5 @@
 
    return YES;
 }
-
-
-
-- (void)pushRegistry:(PKPushRegistry *)registry didUpdatePushCredentials:(PKPushCredentials *)credentials forType:(NSString *)type {
-    
-}
-
-- (void)pushRegistry:(PKPushRegistry *)registry didReceiveIncomingPushWithPayload:(PKPushPayload *)payload forType:(NSString *)type {
-
-}
-
 
 @end
