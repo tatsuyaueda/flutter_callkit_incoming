@@ -177,7 +177,7 @@ public class Call: NSObject {
         self.includesCallsInRecents = true
         self.ringtonePath = ""
         self.configureAudioSession = true
-        self.audioSessionMode = ""
+        self.audioSessionMode = "voiceChat"
         self.audioSessionActive = true
         self.audioSessionPreferredSampleRate = 44100.0
         self.audioSessionPreferredIOBufferDuration = 0.005
